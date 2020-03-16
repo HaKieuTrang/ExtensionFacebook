@@ -1,0 +1,8 @@
+.info_class {
+    color: #fcfaff;
+    margin: 8px;
+    font-size: 15px;
+    background: rgba(5, 3, 9, 0.49);
+    position: absolute;
+    top: 20px;
+}
