@@ -1,4 +1,4 @@
-var classImg = ['spotlight', 'scaledImageFitWidth', 'scaledImageFitHeight'];
+var classImg = ['spotlight', 'scaledImageFitWidth', 'scaledImageFitHeight', 'coverPhotoImg'];
 $('.info_class').remove();
 classImg.forEach(getInfo);
 
@@ -11,7 +11,7 @@ function getInfo(item) {
         if (val !== '') {
             var str = 'Trong hình ảnh có thể có:',
                 check = val.indexOf(str),
-                len = str.length
+                len = str.length + check,
             info = '';
             if (check >= 0) {
                 info = val.slice(len);
@@ -22,7 +22,6 @@ function getInfo(item) {
                 new_element.textContent = info;
                 $('#img_' + i).after(new_element);
             }
-            console.log(i + ': ' + info);
         }
     }
 }
